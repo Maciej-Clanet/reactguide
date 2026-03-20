@@ -9,7 +9,6 @@ function App() {
       <Header />
       <main class="main-content">
         <HeroBanner />
-
       </main>
     </>
   )
