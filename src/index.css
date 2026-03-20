@@ -1,20 +1,24 @@
 :root {
-  --text: #D4E7FE;
+  --text: #d4e7fe;
   --bg-transparent: rgba(212, 231, 254, 0.2);
-  --bg: #000E1F;
+  --bg: #000e1f;
   --card-bg: rgba(120, 181, 253, 0.05);
   --card-stroke: rgba(120, 191, 253, 0.5);
   --card-glow: inset 0px 0px 64px 0px rgba(137, 32, 252, 0.3);
 
-  --accent: #8920FC;
-  --primary: #78B5FD;
-  --secondary: #2902AE;
+  --accent: #8920fc;
+  --primary: #78b5fd;
+  --secondary: #2902ae;
+
+  --sb-track-color: #2902ae;
+  --sb-thumb-color: #78b5fd;
+  --sb-size: 4px;
 
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px var(--sans);
@@ -26,7 +30,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 * {
@@ -36,4 +39,36 @@
 
 button {
   cursor: pointer;
+}
+
+/* Custom scrollbar */
+body {
+  --sb-track-color: var(--secondary);
+  --sb-thumb-color: var(--primary);
+  --sb-size: 4px;
+}
+
+/* custom scrollbar */
+.scrollable {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+/* Fallback for browsers that don't support the standard properties */
+@supports not (scrollbar-width: thin) {
+  .scrollable::-webkit-scrollbar {
+    width: var(--sb-size);
+    height: var(--sb-size);
+  }
+
+  .scrollable::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 4px;
+  }
+
+  .scrollable::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 16px;
+  }
 }
