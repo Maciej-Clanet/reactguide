@@ -1,5 +1,6 @@
 :root {
   --text: #D4E7FE;
+  --bg-transparent: rgba(212, 231, 254, 0.2);
   --bg: #000E1F;
   --card-bg: rgba(120, 181, 253, 0.05);
   --card-stroke: rgba(120, 191, 253, 0.5);
@@ -16,7 +17,7 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
+  font: 18px var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
