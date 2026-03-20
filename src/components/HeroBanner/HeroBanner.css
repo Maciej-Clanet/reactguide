@@ -32,6 +32,7 @@
 
 .hero-label-wrapper {
     position: relative;
+    background: linear-gradient(180deg, rgba(212, 231, 254, 0.2) 0%, rgba(212, 231, 254, 0) 30%);
     background-color: var(--card-bg);
     border: 1px solid var(--card-stroke);
     min-width: 25%;

@@ -7,8 +7,13 @@ function App() {
   return (
     <>
       <Header />
-      <main class="main-content">
+      <main className="main-content">
         <HeroBanner />
+        <div className="all-sections">
+
+
+
+        </div>
       </main>
     </>
   )
