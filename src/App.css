@@ -19,6 +19,34 @@ html {
   gap: 128px;
 }
 
+.cards-row {
+  display: flex;
+  gap: 16px;
+}
+.code-example-row {
+  display: grid;
+  grid-template-columns: 2fr auto 1fr;
+  gap: 16px;
+
+  > .horizontal-divider {
+    background-color: var(--bg-transparent);
+    width: 2px;
+  }
+
+  > .code-block {
+    display: flex;
+    flex-direction: column;
+  }
+  > .code-block > pre {
+    flex: 1;
+  }
+}
+
+.chips-example-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 1000px) {
   .all-sections {
     padding: 128px 64px;
@@ -27,5 +55,8 @@ html {
 @media only screen and (max-width: 700px) {
   .all-sections {
     padding: 128px 8px;
+  }
+  .cards-row {
+    flex-direction: column;
   }
 }

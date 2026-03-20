@@ -1,0 +1,39 @@
+.accordion-lined {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.accordion-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  > .line {
+    background-color: var(--text);
+    height: 1px;
+    border-radius: 32px;
+    flex: 1;
+  }
+  > .line.short {
+    max-width: 16px;
+  }
+
+  > img {
+    transition: all 0.3s ease-in-out;
+  }
+  > .closed {
+    transform: rotateZ(180deg);
+  }
+}
+.accordion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
