@@ -1,0 +1,27 @@
+.card{
+    color: var(--text);
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-stroke);
+
+    box-shadow: var(--card-glow);
+    
+    padding: 32px;
+    border-radius: 8px;
+    
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    gap: 16px;
+
+    > h2{
+        font-size: 32px;
+    }
+}
+
+.card.highlighted{
+    background-color: var(--secondary);
+    > h2{
+        font-size: 64px;
+    }
+}
