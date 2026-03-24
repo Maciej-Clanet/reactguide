@@ -9,6 +9,7 @@ import xIcon from "./assets/icons/X.png";
 import CollapsibleExample from "./components/CollapsibleExample/CollapsibleExample";
 
 import { chipComponentCode, chipUsageCode, AccordionComponentCode, AccordionUsageCode, TabsUsageCode, TabsComponentCode } from "./CodeSnippets";
+
 import Tabs from "./components/Tabs/Tabs";
 import { Tab } from "./components/Tabs/Tabs";
 
@@ -69,7 +70,7 @@ function PropsSection() {
             title="Component Internals"
             code={chipComponentCode}
           />
-          <div className="horizontal-divider" />
+          <div className="vertical-divider" />
           <CodeBlock title="Usage Example" code={chipUsageCode} />
         </div>
       </Card>
@@ -153,13 +154,13 @@ function TabsExample() {
 
       {/* code sample */}
       <Tabs>
-          <Tab label="Component Internals">
-            <CodeBlock code={TabsComponentCode} />
-          </Tab>
-          <Tab label="Usage Example">
-            <CodeBlock code={TabsUsageCode} />
-          </Tab>
-        </Tabs>
+        <Tab label="Component Internals">
+          <CodeBlock code={TabsComponentCode} />
+        </Tab>
+        <Tab label="Usage Example">
+          <CodeBlock code={TabsUsageCode} />
+        </Tab>
+      </Tabs>
 
 
     </CollapsibleExample>
