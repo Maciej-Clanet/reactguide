@@ -1,0 +1,14 @@
+.tab-labels{
+    display: flex;
+    gap: 8px;
+}
+
+.tab-label{
+    font-weight: 600;
+    color: var(--text);
+    user-select: none;
+    cursor: pointer;
+}
+.tab-label.active{
+    color: var(--primary)
+}

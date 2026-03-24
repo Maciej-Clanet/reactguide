@@ -6,11 +6,17 @@ export default function Card({
   tags = [],
   highlighted = false,
   children,
+  row = false
 }) {
+
+  let classText= "card ";
+  classText += highlighted ? "highlighted " : "";
+  classText += row ? "row " : "";
+
   return (
-    <div className={highlighted ? "card highlighted" : "card"}>
+    <div className={classText}>
       {title ? <h2>{title}</h2> : null}
-      {tags ? (
+      {tags.length > 0 ? (
         <div className="card-tags">
           Uses:
           {tags.map((tag) => (

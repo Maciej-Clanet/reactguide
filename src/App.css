@@ -47,6 +47,11 @@ html {
   flex-wrap: wrap;
 }
 
+.vertical-divider{
+  width: 2px;
+  background-color: var(--bg-transparent);
+}
+
 @media only screen and (max-width: 1000px) {
   .all-sections {
     padding: 128px 64px;

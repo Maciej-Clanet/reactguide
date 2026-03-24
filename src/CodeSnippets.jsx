@@ -30,3 +30,24 @@ export const chipUsageCode = `
   <Chip text="Tech" />
 </div>;
 `;
+
+export const AccordionComponentCode = `
+function Accordion({ label, children }) {
+  const [isOpen, setIsOpen] = useState(true);
+
+  return (
+    <div className="accordion">
+      <div className="accordion-top">{label}</div>
+      {isOpen ? <div className="accordion-content">
+        {children}
+      </div> : null}
+    </div>
+  );
+}
+`
+
+export const AccordionUsageCode = `
+<Accordion label="my first accordion">
+  Some stuff that can be hidden!
+</Accordion>;
+`
