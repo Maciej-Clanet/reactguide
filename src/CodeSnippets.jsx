@@ -51,3 +51,58 @@ export const AccordionUsageCode = `
   Some stuff that can be hidden!
 </Accordion>;
 `
+
+export const TabsComponentCode = `
+export default function Tabs({ children }) {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const tabs = Children.toArray(children);
+
+    return (
+        <Card>
+            <div className="tab-labels">
+                {tabs.map((child, index) => (
+                     <>
+                        <div
+                            key={index}
+                            className={index === activeIndex ? "tab-label active" : "tab-label"}
+                            onClick={() => setActiveIndex(index)}
+                        >
+                            {child.props.label}
+                        </div>
+                        {
+                            index < tabs.length - 1 ? <div className="vertical-divider" /> : null
+                        }
+                    </>
+                ))}
+            </div>
+            <div className="tab-content">
+                {tabs[activeIndex]}
+            </div>
+        </Card>
+    )
+}
+
+export function Tab({label, children}){
+    return(
+        <div className="tab" label={label}>
+            {children}
+        </div>
+    )
+}
+`
+
+export const TabsUsageCode = `
+ <Tabs>
+  <Tab label="tab 1">
+    <p>Content visible when tab 1 is selected</p>
+    <p>This is very useful when:</p>
+    <ul>
+      <li>You need to provide a lot of informaiton</li>
+      <li>need to switch between different versions of something (ex: a graph)</li>
+    </ul>
+  </Tab>
+  <Tab label="tab 2">
+    tab 2 content
+  </Tab>
+</Tabs>
+`

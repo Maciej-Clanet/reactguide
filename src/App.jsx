@@ -8,8 +8,9 @@ import Chip from "./components/Chip/Chip";
 import xIcon from "./assets/icons/X.png";
 import CollapsibleExample from "./components/CollapsibleExample/CollapsibleExample";
 
-import { chipComponentCode, chipUsageCode, AccordionComponentCode, AccordionUsageCode } from "./CodeSnippets";
+import { chipComponentCode, chipUsageCode, AccordionComponentCode, AccordionUsageCode, TabsUsageCode, TabsComponentCode } from "./CodeSnippets";
 import Tabs from "./components/Tabs/Tabs";
+import { Tab } from "./components/Tabs/Tabs";
 
 function App() {
   return (
@@ -135,22 +136,30 @@ function TabsExample() {
       >
         <p>Tabs are a very common element that can be achieved through the use of state</p>
 
-        <Tabs
-          tabList={
-            [
-              {
-                "label": "tab 1",
-                "content": <div>test</div>
-              },
-              {
-                "label": "tab 2",
-                "content": <div>test 2</div>
-              }
-            ]
-          }
-        />
-
+        <Tabs>
+          <Tab label="tab 1">
+            <p>Content visible when tab 1 is selected</p>
+            <p>This is very useful when:</p>
+            <ul>
+              <li>You need to provide a lot of informaiton</li>
+              <li>need to switch between different versions of something (ex: a graph)</li>
+            </ul>
+          </Tab>
+          <Tab label="tab 2">
+            tab 2 content
+          </Tab>
+        </Tabs>
       </Card>
+
+      {/* code sample */}
+      <Tabs>
+          <Tab label="Component Internals">
+            <CodeBlock code={TabsComponentCode} />
+          </Tab>
+          <Tab label="Usage Example">
+            <CodeBlock code={TabsUsageCode} />
+          </Tab>
+        </Tabs>
 
 
     </CollapsibleExample>
