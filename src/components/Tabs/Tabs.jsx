@@ -1,7 +1,7 @@
 import "./Tabs.css"
 import { useState } from "react"
 import Card from "../Card/Card.jsx";
-import { Children } from "react";
+import { Children, Fragment } from "react";
 // each tab should have a label and content
 export default function Tabs({ children }) {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -11,9 +11,9 @@ export default function Tabs({ children }) {
         <Card>
             <div className="tab-labels">
                 {tabs.map((child, index) => (
-                     <>
+                     <Fragment key={index}>
                         <div
-                            key={index}
+                            
                             className={index === activeIndex ? "tab-label active" : "tab-label"}
                             onClick={() => setActiveIndex(index)}
                         >
@@ -22,7 +22,7 @@ export default function Tabs({ children }) {
                         {
                             index < tabs.length - 1 ? <div className="vertical-divider" /> : null
                         }
-                    </>
+                    </Fragment>
                 ))}
             </div>
             <div className="tab-content">
