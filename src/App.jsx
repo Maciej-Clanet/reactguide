@@ -2,7 +2,8 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
 import Card from "./components/Card/Card";
-
+import Chip from "./components/Chip/Chip";
+import xIcon from "./assets/icons/X.png";
 
 function App() {
   return (
@@ -24,6 +25,20 @@ function App() {
               </Card>
               <Card>
                 <h2>Chips</h2>
+                <p>This element is commonly called "Chips"</p>
+                <p>Common features:</p>
+                <ul>
+                  <li>Optional Icons</li>
+                  <li>Highlighted State</li>
+                  <li>Often deletable, a nice visual way to represent options from a form</li>
+                </ul>
+
+                <div className="chips-example">
+                  {/* this is where we gonna place example chips */}
+                  <Chip text="test 1"/>
+                  <Chip text="highlighted one" isHighlighted/>
+                  <Chip text="icon test" icon={xIcon}/>
+                </div>
               </Card>
 
             </div>

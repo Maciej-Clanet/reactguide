@@ -1,0 +1,15 @@
+.chip{
+    color: var(--text);
+    background-color: black;
+    padding: 8px 16px;
+    border-radius: 32px;
+    max-width: max-content;
+    font-weight: 600;
+
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.chip.highlighted{
+    background-color: var(--accent);
+}
