@@ -4,6 +4,9 @@ import HeroBanner from "./components/HeroBanner/HeroBanner";
 import Card from "./components/Card/Card";
 import Chip from "./components/Chip/Chip";
 import xIcon from "./assets/icons/X.png";
+import CodeBlock from "./components/CodeBlock/CodeBlock";
+import { chipComponentCode, chipUsageCode } from "./CodeSnippets"
+
 
 function App() {
   return (
@@ -35,13 +38,24 @@ function App() {
 
                 <div className="chips-example">
                   {/* this is where we gonna place example chips */}
-                  <Chip text="test 1"/>
-                  <Chip text="highlighted one" isHighlighted/>
-                  <Chip text="icon test" icon={xIcon}/>
+                  <Chip text="test 1" />
+                  <Chip text="highlighted one" isHighlighted />
+                  <Chip text="icon test" icon={xIcon} />
                 </div>
               </Card>
-
             </div>
+            <Card  >
+              <CodeBlock
+                language="jsx"
+                title="Component internals"
+                code={chipComponentCode}
+              />
+              <CodeBlock
+                language="jsx"
+                title="Usage Example"
+                code={chipUsageCode}
+              />
+            </Card>
           </section>
 
         </div>
