@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
 import Card from "./components/Card/Card";
 import Chip from "./components/Chip/Chip";
+import Accordion from "./components/Accordion/Accordion";
 import xIcon from "./assets/icons/X.png";
 import CodeBlock from "./components/CodeBlock/CodeBlock";
 import { chipComponentCode, chipUsageCode } from "./CodeSnippets"
@@ -83,8 +84,12 @@ function StateSection(){
         <p>When state changes, react will notice, and re-draw the part of the page with the change</p>
       </Card>
 
-      <Card tags={["test", "temp"]}>
-        stuff
+      <Card tags={["Props", "State", "Conditional Rendering"]}>
+        <h2>Accordion</h2>
+        <p>Common name for componet that shows/hides is called "accordion"</p>
+        <Accordion title="CLICK ME, I'M AN ACCORDION">
+          <p>This text will be only shown when accordion is open</p>
+        </Accordion>
       </Card>
 
 
