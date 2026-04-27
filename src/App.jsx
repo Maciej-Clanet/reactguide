@@ -17,6 +17,7 @@ function App() {
         <div className="all-sections">
 
           <PropsSection/>
+          <StateSection/>
 
         </div>
       </main>
@@ -69,6 +70,24 @@ function PropsSection() {
           code={chipUsageCode}
         />
       </Card>
+    </section>
+  )
+}
+
+function StateSection(){
+  return(
+    <section className="props-section">
+      <Card highlighted>
+        <h2>State</h2>
+        <p>State is similar to a variable, with one key difference</p>
+        <p>When state changes, react will notice, and re-draw the part of the page with the change</p>
+      </Card>
+
+      <Card tags={["test", "temp"]}>
+        stuff
+      </Card>
+
+
     </section>
   )
 }
