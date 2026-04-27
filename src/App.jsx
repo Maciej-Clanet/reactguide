@@ -44,12 +44,15 @@ function App() {
                 </div>
               </Card>
             </div>
-            <Card  >
+            <Card isRow >
               <CodeBlock
                 language="jsx"
                 title="Component internals"
                 code={chipComponentCode}
               />
+
+              <div className="vertical-divider" />
+
               <CodeBlock
                 language="jsx"
                 title="Usage Example"
